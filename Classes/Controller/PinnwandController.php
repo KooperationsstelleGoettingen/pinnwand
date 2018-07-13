@@ -1,11 +1,11 @@
 <?php
 namespace DUD\DudPinnwand\Controller;
 
-
 /***************************************************************
  *
  *  Copyright notice
  *
+ *  (c) 2018 Jan Schrewe (jan.schrewe@uni-goettingen.de), Kooperationstelle Hochschulen und Gewerkschaften Göttingen
  *  (c) 2014 Tom Lachemund <t.lachemund@d-welt.de>, design & distribution
  *
  *  All rights reserved
@@ -30,50 +30,50 @@ namespace DUD\DudPinnwand\Controller;
 /**
  * PinnwandController
  */
-class PinnwandController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
+class PinnwandController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
+{
 
-	/**
-	 * pinnwandRepository
-	 * 
-	 * @var \DUD\DudPinnwand\Domain\Repository\PinnwandRepository
-	 * @inject
-	 */
-	protected $pinnwandRepository;
-	
-	
-	/**
-	 * Initializes the current action
-	 *
-	 * @return void
-	 */
-	public function initializeAction() {
-		
-		// Only do this in Frontend Context
-		if (!empty($GLOBALS['TSFE']) && is_object($GLOBALS['TSFE'])) {
-			// We only want to set the tag once in one request, so we have to cache that statically if it has been done
-			static $cacheTagsSet = FALSE;
+    /**
+     * pinnwandRepository
+     *
+     * @var \DUD\DudPinnwand\Domain\Repository\PinnwandRepository
+     * @inject
+     */
+    protected $pinnwandRepository;
 
-			/** @var $typoScriptFrontendController \TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController  */
-			$typoScriptFrontendController = $GLOBALS['TSFE'];
-			if (!$cacheTagsSet) {
-				$typoScriptFrontendController->addCacheTags(array('tx_dudpinnwand'));
-				$cacheTagsSet = TRUE;
-			}
-			$this->typoScriptFrontendController = $typoScriptFrontendController;
-		}
 
-	}
+    /**
+     * Initializes the current action
+     *
+     * @return void
+     */
+    public function initializeAction()
+    {
 
-	/**
-	 * action list
-	 * 
-	 * @return void
-	 */
-	public function listAction() {
-		$this->pinnwandRepository->setDefaultOrderings( array('date' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING));
-		$limit = $this->settings['number_of_pinns'] > 0 ? $this->settings['number_of_pinns'] : 5;
-		$pinnwands = $this->pinnwandRepository->findAllByLimit(intval($limit));
-		$this->view->assign('pinnwands', $pinnwands);
-	}
+        // Only do this in Frontend Context
+        if (!empty($GLOBALS['TSFE']) && is_object($GLOBALS['TSFE'])) {
+            // We only want to set the tag once in one request, so we have to cache that statically if it has been done
+            static $cacheTagsSet = false;
 
+            /** @var $typoScriptFrontendController \TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController  */
+            $typoScriptFrontendController = $GLOBALS['TSFE'];
+            if (!$cacheTagsSet) {
+                $typoScriptFrontendController->addCacheTags(array('tx_dudpinnwand'));
+                $cacheTagsSet = true;
+            }
+            $this->typoScriptFrontendController = $typoScriptFrontendController;
+        }
+    }
+
+    /**
+     * action list
+     *
+     * @return void
+     */
+    public function listAction()
+    {
+        $limit = $this->settings['number_of_pinns'] > 0 ? $this->settings['number_of_pinns'] : 5;
+        $pinnwands = $this->pinnwandRepository->findAllByLimit(intval($limit));
+        $this->view->assign('pinnwands', $pinnwands);
+    }
 }

@@ -8,7 +8,7 @@ CREATE TABLE tx_dudpinnwand_domain_model_pinnwand (
 
 	date int(11) DEFAULT '0' NOT NULL,
 	image int(11) unsigned NOT NULL default '0',
-	alttext varchar(255) DEFAULT '' NOT NULL,
+	header varchar(255) DEFAULT '' NOT NULL,
 	link varchar(255) DEFAULT '' NOT NULL,
 	text text NOT NULL,
 

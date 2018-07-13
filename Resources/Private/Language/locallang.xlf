@@ -13,8 +13,8 @@
 			<trans-unit id="tx_dudpinnwand_domain_model_pinnwand.image">
 				<source>image</source>
 			</trans-unit>
-			<trans-unit id="tx_dudpinnwand_domain_model_pinnwand.alttext">
-				<source>alttext</source>
+			<trans-unit id="tx_dudpinnwand_domain_model_pinnwand.header">
+				<source>header</source>
 			</trans-unit>
 			<trans-unit id="tx_dudpinnwand_domain_model_pinnwand.link">
 				<source>link</source>
@@ -22,7 +22,7 @@
 			<trans-unit id="tx_dudpinnwand_domain_model_pinnwand.text">
 				<source>text</source>
 			</trans-unit>
-			
+
 		</body>
 	</file>
 </xliff>

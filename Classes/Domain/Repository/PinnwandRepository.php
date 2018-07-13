@@ -1,11 +1,11 @@
 <?php
 namespace DUD\DudPinnwand\Domain\Repository;
 
-
 /***************************************************************
  *
  *  Copyright notice
  *
+ *  (c) 2018 Jan Schrewe (jan.schrewe@uni-goettingen.de), Kooperationstelle Hochschulen und Gewerkschaften Göttingen
  *  (c) 2014 Tom Lachemund <t.lachemund@d-welt.de>, design & distribution
  *
  *  All rights reserved
@@ -30,15 +30,19 @@ namespace DUD\DudPinnwand\Domain\Repository;
 /**
  * The repository for Pinnwands
  */
-class PinnwandRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
-	
-	/**
-	 * @param integer $limit
-	 */
-	 public function findAllByLimit($limit) {
-		$query = $this->createQuery();
-		$query->setLimit($limit);
-		return $query->execute();
-	}
-	
+class PinnwandRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
+{
+    protected $defaultOrderings = array(
+        'sorting' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
+    );
+
+    /**
+     * @param integer $limit
+     */
+    public function findAllByLimit($limit)
+    {
+        $query = $this->createQuery();
+        $query->setLimit($limit);
+        return $query->execute();
+    }
 }

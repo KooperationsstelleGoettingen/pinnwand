@@ -4,6 +4,7 @@ namespace DUD\DudPinnwand\Hooks;
 /***************************************************************
  *  Copyright notice
  *
+ * 	(c) 2018 Jan Schrewe (jan.schrewe@uni-goettingen.de), Kooperationstelle Hochschulen und Gewerkschaften Göttingen
  *  (c) 2011 Georg Ringer <typo3@ringerge.org>
  *  All rights reserved
  *
@@ -28,29 +29,28 @@ namespace DUD\DudPinnwand\Hooks;
  * Hook into tcemain which is used to show preview of news item
  *
  * @package TYPO3
- * @subpackage tx_news
+ * @subpackage tx_dudpinnwand
  */
-class Tcemain {
+class Tcemain
+{
 
-	/**
-	 * Flushes the cache if a news record was edited.
-	 *
-	 * @param array $params
-	 * @return void
-	 */
-	public function clearCachePostProc(array $params) {
+    /**
+     * Flushes the cache if a news record was edited.
+     *
+     * @param array $params
+     * @return void
+     */
+    public function clearCachePostProc(array $params)
+    {
+        if (isset($params['table']) && $params['table'] === 'tx_dudpinnwand_domain_model_pinnwand' && isset($params['uid'])) {
+            $cacheTag = $params['table'] . '_' . $params['uid'];
 
-
-		if (isset($params['table']) && $params['table'] === 'tx_dudpinnwand_domain_model_pinnwand' && isset($params['uid'])) {
-			$cacheTag = $params['table'] . '_' . $params['uid'];
-
-			/** @var $cacheManager \TYPO3\CMS\Core\Cache\CacheManager */
-			$cacheManager = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('TYPO3\\CMS\\Core\\Cache\\CacheManager');
-			$cacheManager->getCache('cache_pages')->flushByTag($cacheTag);
-			$cacheManager->getCache('cache_pagesection')->flushByTag($cacheTag);
-			$cacheManager->getCache('cache_pages')->flushByTag('tx_dudpinnwand');
-			$cacheManager->getCache('cache_pagesection')->flushByTag('tx_dudpinnwand');
-		}
-		
-	}
+            /** @var $cacheManager \TYPO3\CMS\Core\Cache\CacheManager */
+            $cacheManager = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('TYPO3\\CMS\\Core\\Cache\\CacheManager');
+            $cacheManager->getCache('cache_pages')->flushByTag($cacheTag);
+            $cacheManager->getCache('cache_pagesection')->flushByTag($cacheTag);
+            $cacheManager->getCache('cache_pages')->flushByTag('tx_dudpinnwand');
+            $cacheManager->getCache('cache_pagesection')->flushByTag('tx_dudpinnwand');
+        }
+    }
 }

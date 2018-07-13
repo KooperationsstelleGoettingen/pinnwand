@@ -1,11 +1,11 @@
 <?php
 namespace DUD\DudPinnwand\Domain\Model;
 
-
 /***************************************************************
  *
  *  Copyright notice
  *
+ *  (c) 2018 Jan Schrewe (jan.schrewe@uni-goettingen.de), Kooperationstelle Hochschulen und Gewerkschaften Göttingen
  *  (c) 2014 Tom Lachemund <t.lachemund@d-welt.de>, design & distribution
  *
  *  All rights reserved
@@ -30,63 +30,66 @@ namespace DUD\DudPinnwand\Domain\Model;
 /**
  * Pinnwand
  */
-class Pinnwand extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
+class Pinnwand extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
+{
 
-	/**
-	 * date
-	 * 
-	 * @var \DateTime
-	 */
-	protected $date;
+    /**
+     * date
+     *
+     * @var \DateTime
+     */
+    protected $date;
 
-	/**
+    /**
      * image
      *
      * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference
      */
     protected $image = null;
 
-	/**
-	 * alttext
-	 * 
-	 * @var string
-	 */
-	protected $alttext = '';
+    /**
+     * alttext
+     *
+     * @var string
+     */
+    protected $header = '';
 
-	/**
-	 * link
-	 * 
-	 * @var string
-	 */
-	protected $link = '';
+    /**
+     * link
+     *
+     * @var string
+     */
+    protected $link = '';
 
-	/**
-	 * text
-	 * 
-	 * @var string
-	 */
-	protected $text = '';
+    /**
+     * text
+     *
+     * @var string
+     */
+    protected $text = '';
 
-	/**
-	 * Returns the date
-	 * 
-	 * @return \DateTime $date
-	 */
-	public function getDate() {
-		return $this->date;
-	}
+    /**
+     * Returns the date
+     *
+     * @return \DateTime $date
+     */
+    public function getDate()
+    {
+        return $this->date;
+    }
 
-	/**
-	 * Sets the date
-	 * 
-	 * @param \DateTime $date
-	 * @return void
-	 */
-	public function setDate(\DateTime $date) {
-		$this->date = $date;
-	}
+    /**
+     * Sets the date
+     *
+     * @param \DateTime $date
+     * @return void
+     */
+    public function setDate(\DateTime $date)
+    {
+        $this->date = $date;
+    }
 
-	/**
+    /**
      * Returns the image
      *
      * @return \TYPO3\CMS\Extbase\Domain\Model\FileReference $image
@@ -95,7 +98,7 @@ class Pinnwand extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
     {
         return $this->image;
     }
-    
+
     /**
      * Sets the image
      *
@@ -107,61 +110,66 @@ class Pinnwand extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
         $this->image = $image;
     }
 
-	/**
-	 * Returns the alttext
-	 * 
-	 * @return string $alttext
-	 */
-	public function getAlttext() {
-		return $this->alttext;
-	}
+    /**
+     * Returns the alttext
+     *
+     * @return string $alttext
+     */
+    public function getHeader()
+    {
+        return $this->header;
+    }
 
-	/**
-	 * Sets the alttext
-	 * 
-	 * @param string $alttext
-	 * @return void
-	 */
-	public function setAlttext($alttext) {
-		$this->alttext = $alttext;
-	}
+    /**
+     * Sets the alttext
+     *
+     * @param string $alttext
+     * @return void
+     */
+    public function setHeader($alttext)
+    {
+        $this->alttext = $header;
+    }
 
-	/**
-	 * Returns the link
-	 * 
-	 * @return string $link
-	 */
-	public function getLink() {
-		return $this->link;
-	}
+    /**
+     * Returns the link
+     *
+     * @return string $link
+     */
+    public function getLink()
+    {
+        return $this->link;
+    }
 
-	/**
-	 * Sets the link
-	 * 
-	 * @param string $link
-	 * @return void
-	 */
-	public function setLink($link) {
-		$this->link = $link;
-	}
+    /**
+     * Sets the link
+     *
+     * @param string $link
+     * @return void
+     */
+    public function setLink($link)
+    {
+        $this->link = $link;
+    }
 
-	/**
-	 * Returns the text
-	 * 
-	 * @return string $text
-	 */
-	public function getText() {
-		return $this->text;
-	}
+    /**
+     * Returns the text
+     *
+     * @return string $text
+     */
+    public function getText()
+    {
+        return $this->text;
+    }
 
-	/**
-	 * Sets the text
-	 * 
-	 * @param string $text
-	 * @return void
-	 */
-	public function setText($text) {
-		$this->text = $text;
-	}
-
+    /**
+     * Sets the text
+     *
+     * @param string $text
+     * @return void
+     */
+    public function setText($text)
+    {
+        $this->text = $text;
+    }
 }

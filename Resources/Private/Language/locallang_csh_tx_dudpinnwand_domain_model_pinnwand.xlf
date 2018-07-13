@@ -10,8 +10,8 @@
 			<trans-unit id="image.description">
 				<source>image</source>
 			</trans-unit>
-			<trans-unit id="alttext.description">
-				<source>alttext</source>
+			<trans-unit id="header.description">
+				<source>header</source>
 			</trans-unit>
 			<trans-unit id="link.description">
 				<source>link</source>

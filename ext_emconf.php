@@ -11,34 +11,32 @@
  ***************************************************************/
 
 $EM_CONF[$_EXTKEY] = array(
-	'title' => 'd&d Pinnwand',
-	'description' => 'Displays cropped linked images for right column',
-	'category' => 'plugin',
-	'author' => 'Tom Lachemund',
-	'author_email' => 'support@d-welt.de',
-	'author_company' => 'd&d design & distribution GmbH & Co. KG',
-	'shy' => '',
-	'priority' => '',
-	'module' => '',
-	'state' => 'stable',
-	'internal' => '',
-	'uploadfolder' => '1',
-	'createDirs' => '',
-	'modify_tables' => '',
-	'clearCacheOnLoad' => 0,
-	'lockType' => '',
-	'version' => '8.7.1',
-	'constraints' => array(
-		'depends' => array(
-			'extbase' => '6.2',
-			'fluid' => '6.2',
-			'typo3' => '6.2',
-		),
-		'conflicts' => array(
-		),
-		'suggests' => array(
-		),
-	),
+    'title' => 'Pinnwand',
+    'description' => 'Displays text snippets and images',
+    'category' => 'plugin',
+    'author' => 'Jan Schrewe/Tom Lachemund',
+    'author_email' => 'jan.schrewe@uni-goettingen.de',
+    'author_company' => 'Kooperationsstelle Hochschulen und Gewerkschften Göttingen',
+    'shy' => '',
+    'priority' => '',
+    'module' => '',
+    'state' => 'stable',
+    'internal' => '',
+    'uploadfolder' => '1',
+    'createDirs' => '',
+    'modify_tables' => '',
+    'clearCacheOnLoad' => 0,
+    'lockType' => '',
+    'version' => '1.0',
+    'constraints' => array(
+        'depends' => array(
+            'extbase' => '6.2',
+            'fluid' => '6.2',
+            'typo3' => '6.2',
+        ),
+        'conflicts' => array(
+        ),
+        'suggests' => array(
+        ),
+    ),
 );
-
-?>

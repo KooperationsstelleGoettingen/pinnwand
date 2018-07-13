@@ -13,8 +13,8 @@
 			<trans-unit id="tx_dudpinnwand_domain_model_pinnwand.image">
 				<source>Bild:</source>
 			</trans-unit>
-			<trans-unit id="tx_dudpinnwand_domain_model_pinnwand.alttext">
-				<source>Alternativtext für das Bild:</source>
+			<trans-unit id="tx_dudpinnwand_domain_model_pinnwand.header">
+				<source>Überschrift:</source>
 			</trans-unit>
 			<trans-unit id="tx_dudpinnwand_domain_model_pinnwand.link">
 				<source>Link:</source>
