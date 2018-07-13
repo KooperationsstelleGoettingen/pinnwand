@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2014-04-11T21:01:03Z" product-name="dud_pinnwand">
+		<header/>
+		<body>
+
+			<trans-unit id="tx_dudpinnwand_domain_model_pinnwand">
+				<source>Pinnwand</source>
+			</trans-unit>
+			<trans-unit id="tx_dudpinnwand_domain_model_pinnwand.date">
+				<source>date</source>
+			</trans-unit>
+			<trans-unit id="tx_dudpinnwand_domain_model_pinnwand.image">
+				<source>image</source>
+			</trans-unit>
+			<trans-unit id="tx_dudpinnwand_domain_model_pinnwand.alttext">
+				<source>alttext</source>
+			</trans-unit>
+			<trans-unit id="tx_dudpinnwand_domain_model_pinnwand.link">
+				<source>link</source>
+			</trans-unit>
+			<trans-unit id="tx_dudpinnwand_domain_model_pinnwand.text">
+				<source>text</source>
+			</trans-unit>
+			
+		</body>
+	</file>
+</xliff>

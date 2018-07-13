@@ -1,0 +1,26 @@
+{namespace dud = DUD\DudPinnwand\ViewHelpers}
+<f:layout name="Default" />
+<f:section name="main">
+<f:flashMessages />
+<f:if condition="{pinnwands}">
+<div id="pinnwand_content">
+<h1>Pinnwand</h1>
+    <ul>
+        <f:for each="{pinnwands}" as="pinnwand">
+            <li>
+            <f:if condition="{pinnwand.image}">
+                <f:link.typolink parameter="{pinnwand.link}">
+					<f:comment><f:image src="uploads/tx_dudpinnwand/{pinnwand.image}" alt="{pinnwand.alttext}"  maxWidth="{settings.pinn.maxwidth}" maxHeight="{settings.pinn.maxheight}" /></f:comment>
+                    <f:image src="{pinnwand.image.originalResource.publicUrl}" alt="{pinnwand.alttext}"  maxWidth="{settings.pinn.maxwidth}" maxHeight="{settings.pinn.maxheight}" />
+                </f:link.typolink>
+            </f:if>
+            <f:if condition="{pinnwand.text}">
+            	<div class="pinntext"><f:format.html>{pinnwand.text}</f:format.html></div>
+            </f:if>
+            <f:cObject typoscriptObjectPath="lib.pinnedit" data="{uid: pinnwand.uid, hidden: pinnwand.hidden}"  />
+            </li>
+        </f:for>
+     </ul>
+</div>
+ </f:if>
+</f:section>

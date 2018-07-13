@@ -1,0 +1,40 @@
+plugin.tx_dudpinnwand {
+	view {
+		templateRootPaths >
+		templateRootPaths {
+			0 = {$plugin.tx_dudpinnwand.view.templateRootPath}
+			1 = {$templates}dud_pinnwand/Templates/
+		}
+		partialRootPaths >
+		partialRootPaths {	
+			0 = {$plugin.tx_dudpinnwand.view.partialRootPath}
+			1 = {$templates}dud_pinnwand/Partials/
+		}
+		layoutRootPaths >
+		layoutRootPaths {
+			0 = {$plugin.tx_dudpinnwand.view.layoutRootPath}
+			1 = {$templates}dud_pinnwand/Layouts/
+		}
+	}
+	persistence {
+		storagePid = {$plugin.tx_dudpinnwand.persistence.storagePid}
+	}
+	features {
+		# uncomment the following line to enable the new Property Mapper.
+		# rewrittenPropertyMapper = 1
+	}
+	settings {
+		pinn {
+			maxwidth = 255
+			maxheight = 400
+		}
+		number_of_pinns = 5
+	}
+}
+
+plugin.tx_dudpinnwand._CSS_DEFAULT_STYLE (
+	div.tx-dud-pinnwand ul{list-style-type:none;margin:0;padding:0}
+	div.tx-dud-pinnwand ul li{margin:0;padding:0;text-align:left;margin-bottom:15px;s}
+	div.tx-dud-pinnwand hr {border-color:#ededed !important;}
+	div.pinntext p {font-size:0.85em;color:#969696;max-width:255px;margin:0 !important;}
+)
