@@ -53,7 +53,7 @@ return array(
         ),
         'searchFields' => 'date,image,alttext,link,text,',
         //'dynamicConfigFile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Configuration/TCA/Pinnwand.php',
-        'iconfile' => 'EXT:dud_pinnwand/Resources/Public/Icons/pinnwand.png'
+        'iconfile' => 'EXT:pinnwand/Resources/Public/Icons/Extension.svg'
     ),
     'interface' => array(
         'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, header, date, image, link, text',
@@ -90,8 +90,8 @@ return array(
                 'items' => array(
                     array('', 0),
                 ),
-                'foreign_table' => 'tx_dudpinnwand_domain_model_pinnwand',
-                'foreign_table_where' => 'AND tx_dudpinnwand_domain_model_pinnwand.pid=###CURRENT_PID### AND tx_dudpinnwand_domain_model_pinnwand.sys_language_uid IN (-1,0)',
+                'foreign_table' => 'tx_pinnwand_domain_model_pinnwand',
+                'foreign_table_where' => 'AND tx_pinnwand_domain_model_pinnwand.pid=###CURRENT_PID### AND tx_pinnwand_domain_model_pinnwand.sys_language_uid IN (-1,0)',
             ),
         ),
         'l10n_diffsource' => array(
@@ -150,7 +150,7 @@ return array(
         ),
                 'alttext' => array(
             'exclude' => 0,
-            'label' => 'LLL:EXT:dud_pinnwand/Resources/Private/Language/locallang_db.xlf:tx_dudpinnwand_domain_model_pinnwand.header',
+            'label' => 'LLL:EXT:pinnwand/Resources/Private/Language/locallang_db.xlf:tx_pinnwand_domain_model_pinnwand.header',
             'config' => array(
                 'type' => 'input',
                 'size' => 40,
@@ -159,7 +159,7 @@ return array(
         ),
         'date' => array(
             'exclude' => 0,
-            'label' => 'LLL:EXT:dud_pinnwand/Resources/Private/Language/locallang_db.xlf:tx_dudpinnwand_domain_model_pinnwand.date',
+            'label' => 'LLL:EXT:pinnwand/Resources/Private/Language/locallang_db.xlf:tx_pinnwand_domain_model_pinnwand.date',
             'config' => array(
                 'type' => 'input',
                 'size' => 7,
@@ -170,7 +170,7 @@ return array(
         ),
         'image' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:dud_pinnwand/Resources/Private/Language/locallang_db.xlf:tx_dudpinnwand_domain_model_pinnwand.image',
+            'label' => 'LLL:EXT:pinnwand/Resources/Private/Language/locallang_db.xlf:tx_pinnwand_domain_model_pinnwand.image',
             'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
                 'image',
                 array(
@@ -216,7 +216,7 @@ return array(
         ),
         'link' => array(
             'exclude' => 0,
-            'label' => 'LLL:EXT:dud_pinnwand/Resources/Private/Language/locallang_db.xlf:tx_dudpinnwand_domain_model_pinnwand.link',
+            'label' => 'LLL:EXT:pinnwand/Resources/Private/Language/locallang_db.xlf:tx_pinnwand_domain_model_pinnwand.link',
             'config' => array(
                 'type'     => 'input',
                 'size'     => '15',
@@ -241,7 +241,7 @@ return array(
         ),
         'text' => array(
             'exclude' => 0,
-            'label' => 'LLL:EXT:dud_pinnwand/Resources/Private/Language/locallang_db.xlf:tx_dudpinnwand_domain_model_pinnwand.text',
+            'label' => 'LLL:EXT:pinnwand/Resources/Private/Language/locallang_db.xlf:tx_pinnwand_domain_model_pinnwand.text',
             'config' => array(
                 'type' => 'text',
                 'cols' => 40,
