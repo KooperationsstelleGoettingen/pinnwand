@@ -4,22 +4,22 @@
 		<header/>
 		<body>
 
-			<trans-unit id="tx_dudpinnwand_domain_model_pinnwand">
+			<trans-unit id="tx_pinnwand_domain_model_pinnwand">
 				<source>Pinnwand</source>
 			</trans-unit>
-			<trans-unit id="tx_dudpinnwand_domain_model_pinnwand.date">
+			<trans-unit id="tx_pinnwand_domain_model_pinnwand.date">
 				<source>date</source>
 			</trans-unit>
-			<trans-unit id="tx_dudpinnwand_domain_model_pinnwand.image">
+			<trans-unit id="tx_pinnwand_domain_model_pinnwand.image">
 				<source>image</source>
 			</trans-unit>
-			<trans-unit id="tx_dudpinnwand_domain_model_pinnwand.header">
+			<trans-unit id="tx_pinnwand_domain_model_pinnwand.header">
 				<source>header</source>
 			</trans-unit>
-			<trans-unit id="tx_dudpinnwand_domain_model_pinnwand.link">
+			<trans-unit id="tx_pinnwand_domain_model_pinnwand.link">
 				<source>link</source>
 			</trans-unit>
-			<trans-unit id="tx_dudpinnwand_domain_model_pinnwand.text">
+			<trans-unit id="tx_pinnwand_domain_model_pinnwand.text">
 				<source>text</source>
 			</trans-unit>
 

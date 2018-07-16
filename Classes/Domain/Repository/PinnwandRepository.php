@@ -27,10 +27,12 @@ namespace DUD\DudPinnwand\Domain\Repository;
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
 
+use \TYPO3\CMS\Extbase\Persistence\Repository;
+
 /**
  * The repository for Pinnwands
  */
-class PinnwandRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
+class PinnwandRepository extends Repository
 {
     protected $defaultOrderings = array(
         'sorting' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,

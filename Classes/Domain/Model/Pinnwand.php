@@ -27,10 +27,12 @@ namespace DUD\DudPinnwand\Domain\Model;
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
 
+use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
+
 /**
  * Pinnwand
  */
-class Pinnwand extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
+class Pinnwand extends AbstractEntity
 {
 
     /**

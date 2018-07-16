@@ -1,15 +1,15 @@
 
-plugin.tx_dudpinnwand {
+plugin.tx_pinnwand {
 	view {
 		# cat=plugin.tx_dudpinnwand/file; type=string; label=Path to template root (FE)
-		templateRootPath = EXT:dud_pinnwand/Resources/Private/Templates/
+		templateRootPath = EXT:pinnwand/Resources/Private/Templates/
 		# cat=plugin.tx_dudpinnwand/file; type=string; label=Path to template partials (FE)
-		partialRootPath = EXT:dud_pinnwand/Resources/Private/Partials/
+		partialRootPath = EXT:pinnwand/Resources/Private/Partials/
 		# cat=plugin.tx_dudpinnwand/file; type=string; label=Path to template layouts (FE)
-		layoutRootPath = EXT:dud_pinnwand/Resources/Private/Layouts/
+		layoutRootPath = EXT:pinnwand/Resources/Private/Layouts/
 	}
 	persistence {
-		# cat=plugin.tx_dudpinnwand//a; type=string; label=Default storage PID
+		# cat=plugin.tx_pinnwand//a; type=string; label=Default storage PID
 		storagePid =
 	}
 }

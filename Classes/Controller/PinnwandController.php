@@ -27,10 +27,13 @@ namespace DUD\DudPinnwand\Controller;
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
 
-/**
+ use \DUD\DudPinnwand\Domain\Repository\PinnwandRepository;
+ use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
+
+ /**
  * PinnwandController
  */
-class PinnwandController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
+class PinnwandController extends ActionController
 {
 
     /**
@@ -40,6 +43,16 @@ class PinnwandController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
      * @inject
      */
     protected $pinnwandRepository;
+
+    /**
+     * Inject the product repository
+     *
+     * @param \MyVendor\StoreInventory\Domain\Repository\ProductRepository $productRepository
+     */
+    public function injectProductRepository(PinnwandRepository $pinnwandRepository)
+    {
+        $this->pinnwandRepository = $pinnwandRepository;
+    }
 
 
     /**

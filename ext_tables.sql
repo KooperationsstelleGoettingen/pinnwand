@@ -1,7 +1,7 @@
 #
-# Table structure for table 'tx_dudpinnwand_domain_model_pinnwand'
+# Table structure for table 'tx_pinnwand_domain_model_pinnwand'
 #
-CREATE TABLE tx_dudpinnwand_domain_model_pinnwand (
+CREATE TABLE tx_pinnwand_domain_model_pinnwand (
 
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,

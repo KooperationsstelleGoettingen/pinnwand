@@ -31,7 +31,7 @@ if (!defined('TYPO3_MODE')) {
 
 return array(
     'ctrl' => array(
-        'title'	=> 'LLL:EXT:dud_pinnwand/Resources/Private/Language/locallang_db.xlf:tx_dudpinnwand_domain_model_pinnwand',
+        'title'	=> 'LLL:EXT:pinnwand/Resources/Private/Language/locallang_db.xlf:tx_pinnwand_domain_model_pinnwand',
         'label' => 'alttext',
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',

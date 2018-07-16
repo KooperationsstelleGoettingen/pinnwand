@@ -1,23 +1,23 @@
-plugin.tx_dudpinnwand {
+plugin.tx_pinnwand {
 	view {
 		templateRootPaths >
 		templateRootPaths {
-			0 = {$plugin.tx_dudpinnwand.view.templateRootPath}
-			1 = {$templates}dud_pinnwand/Templates/
+			0 = {$plugin.tx_pinnwand.view.templateRootPath}
+			1 = {$templates}pinnwand/Templates/
 		}
 		partialRootPaths >
-		partialRootPaths {	
-			0 = {$plugin.tx_dudpinnwand.view.partialRootPath}
-			1 = {$templates}dud_pinnwand/Partials/
+		partialRootPaths {
+			0 = {$plugin.tx_pinnwand.view.partialRootPath}
+			1 = {$templates}pinnwand/Partials/
 		}
 		layoutRootPaths >
 		layoutRootPaths {
-			0 = {$plugin.tx_dudpinnwand.view.layoutRootPath}
-			1 = {$templates}dud_pinnwand/Layouts/
+			0 = {$plugin.tx_pinnwand.view.layoutRootPath}
+			1 = {$templates}pinnwand/Layouts/
 		}
 	}
 	persistence {
-		storagePid = {$plugin.tx_dudpinnwand.persistence.storagePid}
+		storagePid = {$plugin.tx_pinnwand.persistence.storagePid}
 	}
 	features {
 		# uncomment the following line to enable the new Property Mapper.
