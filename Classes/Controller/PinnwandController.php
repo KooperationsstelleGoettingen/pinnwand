@@ -1,5 +1,5 @@
 <?php
-namespace DUD\DudPinnwand\Controller;
+namespace DUD\Pinnwand\Controller;
 
 /***************************************************************
  *
@@ -27,7 +27,7 @@ namespace DUD\DudPinnwand\Controller;
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
 
- use \DUD\DudPinnwand\Domain\Repository\PinnwandRepository;
+ use \DUD\Pinnwand\Domain\Repository\PinnwandRepository;
  use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 
  /**
@@ -39,7 +39,7 @@ class PinnwandController extends ActionController
     /**
      * pinnwandRepository
      *
-     * @var \DUD\DudPinnwand\Domain\Repository\PinnwandRepository
+     * @var \DUD\Pinnwand\Domain\Repository\PinnwandRepository
      * @inject
      */
     protected $pinnwandRepository;

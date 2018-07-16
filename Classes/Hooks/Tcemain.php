@@ -1,5 +1,5 @@
 <?php
-namespace DUD\DudPinnwand\Hooks;
+namespace DUD\Pinnwand\Hooks;
 
 /***************************************************************
  *  Copyright notice

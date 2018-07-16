@@ -1,5 +1,5 @@
 <?php
-namespace DUD\DudPinnwand\ViewHelpers;
+namespace DUD\Pinnwand\ViewHelpers;
 
 /***************************************************************
  *

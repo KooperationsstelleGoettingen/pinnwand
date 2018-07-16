@@ -1,5 +1,5 @@
 <?php
-namespace DUD\DudPinnwand\Domain\Model;
+namespace DUD\Pinnwand\Domain\Model;
 
 /***************************************************************
  *

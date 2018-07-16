@@ -32,7 +32,7 @@ if (!defined('TYPO3_MODE')) {
 return array(
     'ctrl' => array(
         'title'	=> 'LLL:EXT:pinnwand/Resources/Private/Language/locallang_db.xlf:tx_pinnwand_domain_model_pinnwand',
-        'label' => 'alttext',
+        'label' => 'header',
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
         'cruser_id' => 'cruser_id',
@@ -51,7 +51,7 @@ return array(
             'starttime' => 'starttime',
             'endtime' => 'endtime',
         ),
-        'searchFields' => 'date,image,alttext,link,text,',
+        'searchFields' => 'date,image,header,link,text,',
         //'dynamicConfigFile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Configuration/TCA/Pinnwand.php',
         'iconfile' => 'EXT:pinnwand/Resources/Public/Icons/Extension.svg'
     ),
@@ -148,7 +148,7 @@ return array(
                 ),
             ),
         ),
-                'alttext' => array(
+                'header' => array(
             'exclude' => 0,
             'label' => 'LLL:EXT:pinnwand/Resources/Private/Language/locallang_db.xlf:tx_pinnwand_domain_model_pinnwand.header',
             'config' => array(
