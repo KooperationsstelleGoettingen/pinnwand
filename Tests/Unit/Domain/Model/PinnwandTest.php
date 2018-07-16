@@ -5,6 +5,7 @@ namespace \Tests\Unit\Domain\Model;
 /***************************************************************
  *  Copyright notice
  *
+ *  (c) 2018 Jan Schrewe (jan.schrewe@uni-goettingen.de), Kooperationstelle Hochschulen und Gewerkschaften Göttingen
  *  (c) 2014 Tom Lachemund <t.lachemund@d-welt.de>, design & distribution
  *
  *  All rights reserved
@@ -35,133 +36,146 @@ namespace \Tests\Unit\Domain\Model;
  *
  * @author Tom Lachemund <t.lachemund@d-welt.de>
  */
-class PinnwandTest extends \TYPO3\CMS\Extbase\Tests\Unit\BaseTestCase {
-	/**
-	 * @var \DUD\DudPinnwand\Domain\Model\Pinnwand
-	 */
-	protected $subject;
+class PinnwandTest extends \TYPO3\CMS\Extbase\Tests\Unit\BaseTestCase
+{
+    /**
+     * @var \DUD\DudPinnwand\Domain\Model\Pinnwand
+     */
+    protected $subject;
 
-	public function setUp() {
-		$this->subject = new \DUD\DudPinnwand\Domain\Model\Pinnwand();
-	}
+    public function setUp()
+    {
+        $this->subject = new \DUD\DudPinnwand\Domain\Model\Pinnwand();
+    }
 
-	public function tearDown() {
-		unset($this->subject);
-	}
+    public function tearDown()
+    {
+        unset($this->subject);
+    }
 
-	/**
-	 * @test
-	 */
-	public function getDateReturnsInitialValueForDateTime() {
-		$this->assertEquals(
-			NULL,
-			$this->subject->getDate()
-		);
-	}
+    /**
+     * @test
+     */
+    public function getDateReturnsInitialValueForDateTime()
+    {
+        $this->assertEquals(
+            null,
+            $this->subject->getDate()
+        );
+    }
 
-	/**
-	 * @test
-	 */
-	public function setDateForDateTimeSetsDate() {
-		$dateTimeFixture = new \DateTime();
-		$this->subject->setDate($dateTimeFixture);
+    /**
+     * @test
+     */
+    public function setDateForDateTimeSetsDate()
+    {
+        $dateTimeFixture = new \DateTime();
+        $this->subject->setDate($dateTimeFixture);
 
-		$this->assertAttributeEquals(
-			$dateTimeFixture,
-			'date',
-			$this->subject
-		);
-	}
+        $this->assertAttributeEquals(
+            $dateTimeFixture,
+            'date',
+            $this->subject
+        );
+    }
 
-	/**
-	 * @test
-	 */
-	public function getImageReturnsInitialValueForString() {
-		$this->assertSame(
-			'',
-			$this->subject->getImage()
-		);
-	}
+    /**
+     * @test
+     */
+    public function getImageReturnsInitialValueForString()
+    {
+        $this->assertSame(
+            '',
+            $this->subject->getImage()
+        );
+    }
 
-	/**
-	 * @test
-	 */
-	public function setImageForStringSetsImage() {
-		$this->subject->setImage('Conceived at T3CON10');
+    /**
+     * @test
+     */
+    public function setImageForStringSetsImage()
+    {
+        $this->subject->setImage('Conceived at T3CON10');
 
-		$this->assertAttributeEquals(
-			'Conceived at T3CON10',
-			'image',
-			$this->subject
-		);
-	}
+        $this->assertAttributeEquals(
+            'Conceived at T3CON10',
+            'image',
+            $this->subject
+        );
+    }
 
-	/**
-	 * @test
-	 */
-	public function getAlttextReturnsInitialValueForString() {
-		$this->assertSame(
-			'',
-			$this->subject->getAlttext()
-		);
-	}
+    /**
+     * @test
+     */
+    public function getHeaderReturnsInitialValueForString()
+    {
+        $this->assertSame(
+            '',
+            $this->subject->getHeader()
+        );
+    }
 
-	/**
-	 * @test
-	 */
-	public function setAlttextForStringSetsAlttext() {
-		$this->subject->setAlttext('Conceived at T3CON10');
+    /**
+     * @test
+     */
+    public function setHeaderForStringSetsHeader()
+    {
+        $this->subject->setHeader('Conceived at T3CON10');
 
-		$this->assertAttributeEquals(
-			'Conceived at T3CON10',
-			'alttext',
-			$this->subject
-		);
-	}
+        $this->assertAttributeEquals(
+            'Conceived at T3CON10',
+            'header',
+            $this->subject
+        );
+    }
 
-	/**
-	 * @test
-	 */
-	public function getLinkReturnsInitialValueForString() {
-		$this->assertSame(
-			'',
-			$this->subject->getLink()
-		);
-	}
+    /**
+     * @test
+     */
+    public function getLinkReturnsInitialValueForString()
+    {
+        $this->assertSame(
+            '',
+            $this->subject->getLink()
+        );
+    }
 
-	/**
-	 * @test
-	 */
-	public function setLinkForStringSetsLink() {
-		$this->subject->setLink('Conceived at T3CON10');
+    /**
+     * @test
+     */
+    public function setLinkForStringSetsLink()
+    {
+        $this->subject->setLink('Conceived at T3CON10');
 
-		$this->assertAttributeEquals(
-			'Conceived at T3CON10',
-			'link',
-			$this->subject
-		);
-	}
+        $this->assertAttributeEquals(
+            'Conceived at T3CON10',
+            'link',
+            $this->subject
+        );
+    }
 
-	/**
-	 * @test
-	 */
-	public function getTextReturnsInitialValueForString() {
-		$this->assertSame(
-			'',
-			$this->subject->getText()
-		);
-	}
+    /**
+     * @test
+     */
+    public function getTextReturnsInitialValueForString()
+    {
+        $this->assertSame(
+            '',
+            $this->subject->getText()
+        );
+    }
 
-	/**
-	 * @test
-	 */
-	public function setTextForStringSetsText() {
-		$this->subject->setText('Conceived at T3CON10');
+    /**
+     * @test
+     */
+    public function setTextForStringSetsText()
+    {
+        $this->subject->setText('Conceived at T3CON10');
 
-		$this->assertAttributeEquals(
-			'Conceived at T3CON10',
-			'text',
-			$this->subject
-		);
-	}
+        $this->assertAttributeEquals(
+            'Conceived at T3CON10',
+            'text',
+            $this->subject
+        );
+    }
 }
