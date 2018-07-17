@@ -25,7 +25,7 @@ plugin.tx_pinnwand {
 	}
 	settings {
 		pinn {
-			maxwidth = 255
+			maxwidth = 300
 			maxheight = 400
 		}
 		number_of_pinns = 5
@@ -36,5 +36,6 @@ plugin.tx_pinnwand._CSS_DEFAULT_STYLE (
 	div.tx-pinnwand ul{list-style-type:none;margin:0;padding:0}
 	div.tx-pinnwand ul li{margin:0;padding:0;text-align:left;margin-bottom:15px;}
 	div.tx-pinnwand hr {border-color:#ededed !important;}
-	div.pinntext p {font-size:0.85em;color:#969696;max-width:255px;margin:0 !important;}
+	div.pinntext h3 {font-size:0.85em;color:#969696;max-width:300px;margin:0 !important;}
+	div.pinntext p {font-size:0.85em;color:#969696;max-width:300px;margin:0 !important;}
 )
