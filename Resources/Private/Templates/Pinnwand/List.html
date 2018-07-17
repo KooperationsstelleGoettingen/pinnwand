@@ -17,8 +17,17 @@
             </f:if>
             <f:if condition="{pinnwand.text}">
               <div class="pinntext well">
-                <h3>{pinnwand.header}</h3>
+                <h3>
+                  <f:link.typolink parameter="{pinnwand.link}">
+                    {pinnwand.header}
+                  </f:link.typolink>
+                </h3>
                 <f:format.html>{pinnwand.text}</f:format.html>
+                <p class="text-right">
+                  <f:link.typolink parameter="{pinnwand.link}">
+                    Mehr...
+                  </f:link.typolink>
+                </p>
               </div>
             </f:if>
           </li>
