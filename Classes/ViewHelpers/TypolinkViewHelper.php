@@ -29,8 +29,9 @@ namespace DUD\Pinnwand\ViewHelpers;
 
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
+use \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper;
 
-class TypolinkViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper
+class TypolinkViewHelper extends AbstractViewHelper
 {
 
      /** @var $cObj ContentObjectRenderer */
