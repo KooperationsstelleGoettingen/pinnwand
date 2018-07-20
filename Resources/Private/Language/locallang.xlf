@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-07-20T12:44:53Z" product-name="pinnwand">
+		<header/>
+		<body>
+			<trans-unit id="tx_pinnwand_domain_model_pinn">
+				<source>Pinn</source>
+			</trans-unit>
+			<trans-unit id="tx_pinnwand_domain_model_pinn.header">
+				<source>Header</source>
+			</trans-unit>
+			<trans-unit id="tx_pinnwand_domain_model_pinn.date">
+				<source>Date</source>
+			</trans-unit>
+			<trans-unit id="tx_pinnwand_domain_model_pinn.image">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="tx_pinnwand_domain_model_pinn.link">
+				<source>Link</source>
+			</trans-unit>
+			<trans-unit id="tx_pinnwand_domain_model_pinn.text">
+				<source>Text</source>
+			</trans-unit>
+			<trans-unit id="tx_pinnwand_domain_model_pinn.backgroundcolor">
+				<source>Backgroundcolor</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

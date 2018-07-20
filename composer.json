@@ -1,0 +1,23 @@
+{
+    "name": "koopgoe/pinnwand",
+    "type": "typo3-cms-extension",
+    "description": "Simple system to pin small snippets on a page.",
+    "authors": [],
+    "require": {
+        "typo3/cms-core": "^8.7.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "KoopGoe\\Pinnwand\\": "Classes"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "KoopGoe\\Pinnwand\\Tests\\": "Tests"
+        }
+    },
+    "replace": {
+        "pinnwand": "self.version",
+        "typo3-ter/pinnwand": "self.version"
+    }
+}
