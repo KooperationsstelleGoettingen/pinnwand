@@ -24,7 +24,8 @@ class PinnController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      */
     public function listAction()
     {
-        $pinns = $this->pinnRepository->findAll();
+        $limit = $this->settings['number_of_pinns'] > 0 ? $this->settings['number_of_pinns'] : 5;
+        $pinns = $this->pinnRepository->findAll(intval($limit));
         $this->view->assign('pinns', $pinns);
     }
 }
