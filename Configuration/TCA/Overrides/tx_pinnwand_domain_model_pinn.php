@@ -2,12 +2,11 @@
 defined('TYPO3_MODE') or die();
 
 $GLOBALS['TCA']['tx_pinnwand_domain_model_pinn']['columns']['link'] = array(
-            'exclude' => 0,
-            'label' => 'LLL:EXT:pinnwand/Resources/Private/Language/locallang_db.xlf:tx_pinnwand_domain_model_pinnwand.link',
+            'exclude' => false,
+            'label' => 'LLL:EXT:pinnwand/Resources/Private/Language/locallang_db.xlf:tx_pinnwand_domain_model_pinn.link',
             'config' => array(
                 'type'     => 'input',
-                'size'     => '15',
-                'max'      => '255',
+                'size'     => '30',
                 'eval'     => 'trim',
                 'wizards'  => array(
                     '_PADDING' => 2,
@@ -25,4 +24,4 @@ $GLOBALS['TCA']['tx_pinnwand_domain_model_pinn']['columns']['link'] = array(
                     )
                 )
             )
-        ),
+        );
